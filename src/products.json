@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"Anil Sindu",
+        "email":"anil@example.com",
+        "mobile":9999
+    },
+    {
+        "id":2,
+        "name":"Peter",
+        "email":"peter@example.com",
+        "mobile":9999
+    },
+    {
+        "id":3,
+        "name":"Bruce",
+        "email":"bruce@example.com",
+        "mobile":9999
+    },
+    {
+        "id":4,
+        "name":"Tony",
+        "email":"tony@example.com",
+        "mobile":9999
+    },
+    {
+        "id":5,
+        "name":"Iron",
+        "email":"iron@example.com",
+        "mobile":9999
+    }
+]
