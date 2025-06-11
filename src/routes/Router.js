@@ -9,19 +9,31 @@ import AuthLayout from '../layout/AuthLayout'
 import SignIn from '../pages/SignIn'
 import Products from '../pages/products/Products'
 import ProductDetails from '../pages/products/ProductDetails'
-import SignUp from '../SignUp'
+import SignUp from '../pages/SignUp'
 import ProtectedRoute from './ProtectedRoute'
+import Contact from '../pages/Contact'
+import Cart from '../pages/products/Cart'
 
 export default function Router() {
 
     const BrowserRouter = createBrowserRouter([
-
+        {
+            path: '/',
+            element: <CommonLayout />,
+            children: [
+                {
+                    path: '/',
+                    element: <Home />
+                }
+            ]
+        },
         {
             path: '/',
             element: <AuthLayout />,
             children: [
+
                 {
-                    path: '/',
+                    path: '/sign-in',
                     element: <SignIn />
                 },
                 {
@@ -40,10 +52,7 @@ export default function Router() {
                     path: '/',
                     element: <CommonLayout />,
                     children: [
-                        {
-                            path: '/home',
-                            element: <Home />
-                        },
+
                         {
                             path: '/about',
                             element: <About />
@@ -57,13 +66,19 @@ export default function Router() {
                             element: <ProductDetails />
                         },
                         {
+                            path: '/cart',
+                            element:<Cart />
+                        },
+                        {
                             path: '/contact',
-                            element: <Form />
+                            element: <Contact />
                         },
                     ]
                 }
             ]
         },
+
+
 
     ])
 

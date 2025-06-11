@@ -49,12 +49,12 @@ export default function ProductDetails() {
                     <h1 className='mt-5 fs-3'>{details.title}</h1>
                     <div className='mt-4'>
                         {details.rating && [...Array(5)].map((_, index) => (
-                            <FontAwesomeIcon 
+                            <FontAwesomeIcon
                                 key={index}
                                 icon={index < Math.floor(details.rating.rate) ? fasStar : farStar}
                                 className='text-warning'
                             />
-                            
+
                             // ({details.rating.rate})
                         ))}
                         <span className='ms-2 text-secondary'>({details.rating.rate})</span>

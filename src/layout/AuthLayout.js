@@ -9,7 +9,7 @@ export default function AuthLayout() {
 
   const leftImage = () => {
     
-     return  location.pathname === "/" ? (
+     return  location.pathname === "/sign-in" ? (
         <img src='https://images.pexels.com/photos/12753820/pexels-photo-12753820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='' className='w-100' />
       ) : (
         <img src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp' alt='' className='w-100 img-fluid' />

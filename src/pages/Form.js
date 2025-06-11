@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { Button } from 'react-bootstrap';
 
-export default function Form({sendDataToParent}) {
+export default function Form({ sendDataToParent }) {
     const [firstName, setFirstName] = useState();
     const [lastName, setLastName] = useState();
 
@@ -16,7 +17,7 @@ export default function Form({sendDataToParent}) {
             ...formData,
             [name]: value,
         })
-        
+
 
     }
 
@@ -29,14 +30,24 @@ export default function Form({sendDataToParent}) {
     }
     return (
         <div>
-            <h1>Contact</h1>
+            {/* <h2 className='mb-4'>Contact</h2> */}
             <form onSubmit={onSubmitHandle}>
-                <input type='text' name='first' placeholder='First name' value={formData.first} onChange={handleChange} /><br /><br />
-                <input type='text' name='last' placeholder='Last name' value={formData.last} onChange={handleChange} /><br /><br />
-                <input type='email' name='econtact' placeholder='Email' value={formData.econtact} onChange={handleChange} /><br /><br />
-                <input type='password' name='' placeholder='Password' /><br /><br />
-                <input type='text' name='' placeholder='Enter services' /><br /><br />
-                <input type='submit' value={'Submit'} />
+                <div className='mb-3'>
+                    <input type='text' name='first' placeholder='First name' value={formData.first} onChange={handleChange} className='input-field' />
+                </div>
+                <div className='mb-3'>
+                    <input type='text' name='last' placeholder='Last name' value={formData.last} onChange={handleChange} className='input-field' />
+                </div>
+                <div className='mb-3'>
+                    <input type='email' name='econtact' placeholder='Email' value={formData.econtact} onChange={handleChange} className='input-field' />
+                </div>
+                <div className='mb-3'>
+                    <input type='password' name='' placeholder='Password' className='input-field' />
+                </div>
+                <div className='mb-3'>
+                    <input type='text' name='' placeholder='Enter services' className='input-field' />
+                </div>
+                <Button type='submit'>Submit</Button>
             </form>
         </div>
     )
