@@ -47,7 +47,7 @@ export default function Form({ sendDataToParent }) {
                 <div className='mb-3'>
                     <input type='text' name='' placeholder='Enter services' className='input-field' />
                 </div>
-                <Button type='submit'>Submit</Button>
+                <Button variant='primary' type='submit'>Submit</Button>
             </form>
         </div>
     )

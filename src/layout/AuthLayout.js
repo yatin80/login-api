@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import Header from '../components/Header'
+import Header from '../components/header/Header'
 import { Col, Container, Row } from 'react-bootstrap'
 
 export default function AuthLayout() {
   const location = useLocation();
   console.log("location", location.pathname);
+  
 
   const leftImage = () => {
     

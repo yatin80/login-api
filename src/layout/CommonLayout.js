@@ -1,13 +1,17 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Header from '../components/Header'
+import { Outlet, useLocation } from 'react-router-dom'
+import Header from '../components/header/Header'
 
 export default function CommonLayout({ children }) {
+    const location = useLocation();
+    const locationPath = location.pathname;
     return (
         <>
-            <Header navTheme="" tagLine="Hot Summar Fashion" />
-
-            <Outlet />
+            {/* <Header navTheme="" tagLine="Hot Summar Fashion" /> */}
+            <Header />
+            <div style={{ paddingTop: `${locationPath === "/" ? "0px" : "64px"}` }}>
+                <Outlet />
+            </div>
         </>
     )
 }

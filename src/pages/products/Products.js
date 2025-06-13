@@ -142,9 +142,10 @@ export default function Products() {
                                 <h3 className='text-center fs-6 mb-3  text-truncate w-100' style={{ lineClamp: 2, WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', display: '-webkit-box', overflow: 'hidden' }}>{items.title}</h3>
                                 {/* <Link to={`/products/${items.id}`} className='btn btn-light'><FontAwesomeIcon icon={faEye} /></Link> */}
                                 <div className='d-flex justify-content-end gap-2'>
-                                    <Button onClick={() => productView(items.id)} className='btn btn-light border-1 border-dark'><FontAwesomeIcon icon={faEye} /></Button>
-                                    <Button onClick={() => addToCart(items.id)} className='btn btn-light border-1 border-dark'><FontAwesomeIcon icon={faCartPlus} /></Button>
-                                    <Button onClick={() => deletProd(items.id)} className='btn btn-light border-1 border-dark'>
+
+                                    <Button onClick={() => productView(items.id)} variant="outline-primary"><FontAwesomeIcon icon={faEye} /></Button>
+                                    <Button onClick={() => addToCart(items.id)} variant="outline-primary"><FontAwesomeIcon icon={faCartPlus} /></Button>
+                                    <Button onClick={() => deletProd(items.id)} variant="outline-primary">
                                         <FontAwesomeIcon icon={faTrash} />
                                     </Button>
                                 </div>

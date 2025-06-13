@@ -2,7 +2,7 @@ import { faStar } from '@fortawesome/free-regular-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
@@ -35,9 +35,13 @@ export default function ProductDetails() {
 
     return (
         <Container>
-            <Link to="/products" className='btn btn-outline-dark my-3'>
+            <Button href='/products' variant="outline-secondary" className='my-3'>
+            <FontAwesomeIcon icon={faArrowLeft} className='me-2' />
+            Back to Products
+            </Button>
+            {/* <Link to="/products" className='btn btn-outline-dark my-3'>
                 <FontAwesomeIcon icon={faArrowLeft} className='me-2' />
-                Back to Products</Link>
+                Back to Products</Link> */}
 
             <Row>
                 <Col md={7}>

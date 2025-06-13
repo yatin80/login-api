@@ -1,5 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';  
-import './App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';  
+// import './App.css';
+import './scss/custom.scss';
+import './App.scss';
 // import { Route, BrowserRouter as Router, RouterProvider, Routes } from 'react-router-dom';
 
 import { MyContext } from './context';
@@ -16,16 +18,7 @@ function App() {
   return (
     <div className="App h-100">
       <MyContext.Provider value={{ text, setText, handleClick }}>
-        {/* <Router>
-          <Routes>
-            <Route path="/" state={'Home'} element={<Home />} />
-            <Route path="/about" state={'About'} element={<About />} />
-            <Route path="/users" element={<Users />} />
-            <Route path="/users/:id" element={<UserDetail />} />
-            <Route path="/contact" element={<Form />} />
-
-          </Routes>
-        </Router> */}
+       
 
         <Router />
       </MyContext.Provider>
